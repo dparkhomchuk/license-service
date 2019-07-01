@@ -2,12 +2,23 @@
 
 const express = require('express');
 
+const {Datastore} = require('@google-cloud/datastore');
+const datastore = new Datastore();
+
 const app = express();
 
 // [START hello_world]
 // Say hello!
 app.get('/', (req, res) => {
-  res.status(200).send('Hello, world!');
+  const id = req.query.id;
+  const key = datastore.key(['License',id]);
+  datastore.get(key, function(err, entity) {
+if(!err && entity) {
+res.status(200).send('all ok');
+return;
+}
+res.status(500);
+});
 });
 // [END hello_world]
 

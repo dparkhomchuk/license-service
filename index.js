@@ -11,13 +11,18 @@ const app = express();
 // Say hello!
 app.get('/', (req, res) => {
   const id = req.query.id;
-  const key = datastore.key(['License',id]);
+  const key = datastore.key(['License',datastore.int(id)]);
   datastore.get(key, function(err, entity) {
 if(!err && entity) {
 res.status(200).send('all ok');
 return;
 }
-res.status(500);
+console.log('all is bad');
+console.log(err);
+console.log(entity);
+console.log(req.query.id);
+console.log(key);
+res.status(500).send('all bad');
 });
 });
 // [END hello_world]

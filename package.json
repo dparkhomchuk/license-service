@@ -1,0 +1,23 @@
+{
+  "name": "license-service",
+  "version": "1.0.0",
+  "description": "simple license service",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dparkhomchuk/license-service.git"
+  },
+  "keywords": [
+    "license",
+    "service"
+  ],
+  "author": "Dmytro Parkhomchuk",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dparkhomchuk/license-service/issues"
+  },
+  "homepage": "https://github.com/dparkhomchuk/license-service#readme"
+}

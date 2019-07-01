@@ -19,9 +19,7 @@ return;
 }
 console.log('all is bad');
 console.log(err);
-console.log(entity);
 console.log(req.query.id);
-console.log(key);
 res.status(500).send('all bad');
 });
 });

@@ -4,7 +4,8 @@
   "description": "simple license service",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/dparkhomchuk/license-service/issues"
   },
-  "homepage": "https://github.com/dparkhomchuk/license-service#readme"
+  "homepage": "https://github.com/dparkhomchuk/license-service#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "^3.0.0",
+    "ava": "^0.25.0",
+    "supertest": "^4.0.0"
+  }
 }

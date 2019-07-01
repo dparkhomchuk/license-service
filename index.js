@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   const id = req.query.id;
   const key = datastore.key(['License',datastore.int(id)]);
   datastore.get(key, function(err, entity) {
-if(!err && entity) {
+if(!err && entity && entity.EndDate > Date.now()) {
 res.status(200).send('all ok');
 return;
 }

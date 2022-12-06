@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/dparkhomchuk/license-service#readme",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "@google-cloud/datastore": "^4.1.3"
   },
   "devDependencies": {
